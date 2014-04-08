@@ -3,9 +3,18 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-# PG creates errors on OSX so use this
-# ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install pg
+# Postgre SQL info
+# 1. PG creates errors on OSX so use this
+#    ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install pg
+# 2. Start postgre server
+# 3. Create socket connection and symlink
+#     ls -l /tmp/.s.PGSQL.5432
+#     grep unix_socket /usr/local/var/postgres/postgresql.conf
+# 4. Create dir
+#     sudo mkdir /var/pgsql_socket/
+#     sudo ln -s /tmp/.s.PGSQL.5432 /var/pgsql_socket/
+# 5. Create dbs
+#    rake db:create:all
 gem 'pg'
 
 # Use SCSS for stylesheets

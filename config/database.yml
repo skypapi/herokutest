@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: db/helloheroku_development
+  database: helloheroku_development
   pool: 5
   password:
 
@@ -16,13 +16,13 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: db/helloheroku_test
+  database: helloheroku_test
   pool: 5
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: db/helloheroku_production
+  database: helloheroku_production
   pool: 5
   password:
