@@ -1,0 +1,2 @@
+class HelloherokuController < ApplicationController
+end
